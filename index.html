@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='deal'>
+
+<head>
+  <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script data-require="angularjs@1.5.5" data-semver="1.5.5" src="https://code.angularjs.org/1.5.5/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller='dealController'>
+  {{selected}}
+  <smash-selector list="list" value="value" selected="selected.value"></smash-selector>
+  <div ng-show="!!selectedTwo.type">{{selectedTwo}}</div>
+  <smash-selector list="friends" value="type" alphabetize="true" selected="selectedTwo.type"></smash-selector>
+</body>
+
+</html>

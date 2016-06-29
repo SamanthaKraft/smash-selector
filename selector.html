@@ -1,0 +1,11 @@
+<div id="smashSelector">
+  <div class="inputDiv">
+    <div class="showSelected" ng-hide="beginType">{{truncate(smashSelected,25)}}</div>
+    <input ng-dblclick="beginType=true" ng-model="searchInput" keydown type-support class="smash" />
+  </div>
+  <div class="dropWindow" ng-show="beginType">
+    <div ng-repeat="l in smashList | filter:searchInput track by $index" class="inList" ng-class="{selected: $index === selectedIndex}" ng-click="smashSelect(l)">
+      <div class="value" ng-mouseover="mouseOver=true" ng-mouseleave="mouseOver=false" ng-class="{highlight: mouseOver}">{{truncate(l[smashValue],27)}} </div>
+    </div>
+  </div>
+</div>
