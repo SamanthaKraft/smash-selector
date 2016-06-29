@@ -19,3 +19,5 @@ and then just bind showSelectedValue in the dom with {{}} instead of selectedVal
 
 BUGS: with two directives the keydown event will not trigger a scroll event in the second directive. It's probably 
 because it's already trigering the first one. need to find a work around
+
+plunkr at http://plnkr.co/edit/2o4nMs2gxDe5igX44VPs?p=info
